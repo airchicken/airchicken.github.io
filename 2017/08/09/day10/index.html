@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>第九天170809 | Keep Curious</title>
+  <title>第十天170815 | Keep Curious</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天成功儲存並使用前天訓練好的CNN 數字辨識模型訓練次數是20000次 前天辨識率非常低是因為訓練次數只有100次的緣故經過2萬次的訓練，幾乎可以辨識正確數字但太過奇怪的數字是會辨識錯誤的，例如4寫得太圓滑會看起來像9，這點與人一樣，會有辨識錯誤，故推測是合理的錯誤 下午正在了解gan，對抗生成式網路，簡單的說明原理大概是，首先有兩個神經網路，一個稱為generator，一個為discrimbe">
+  <meta name="description" content="今日試run了github上的MNIST GAN model可以逐漸的生成類似數字的圖片原本一切順，但後來出現了generator 與 discriminator的loss為NAN的錯誤狀況導致訓練中斷 於網路搜尋稍微搜尋得到的原因是gradient 會有缺陷，或者是兩層的網路太淺，會有一些情形像是淺層學習太慢，深層太快或是深層太快，淺層動作太慢，文章還沒看完，明日要弄清楚原因">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第九天170809">
-<meta property="og:url" content="http://yoursite.com/2017/08/09/day9/index.html">
+<meta property="og:title" content="第十天170815">
+<meta property="og:url" content="http://yoursite.com/2017/08/09/day10/index.html">
 <meta property="og:site_name" content="Keep Curious">
-<meta property="og:description" content="今天成功儲存並使用前天訓練好的CNN 數字辨識模型訓練次數是20000次 前天辨識率非常低是因為訓練次數只有100次的緣故經過2萬次的訓練，幾乎可以辨識正確數字但太過奇怪的數字是會辨識錯誤的，例如4寫得太圓滑會看起來像9，這點與人一樣，會有辨識錯誤，故推測是合理的錯誤 下午正在了解gan，對抗生成式網路，簡單的說明原理大概是，首先有兩個神經網路，一個稱為generator，一個為discrimbe">
-<meta property="og:updated_time" content="2017-08-15T01:19:49.846Z">
+<meta property="og:description" content="今日試run了github上的MNIST GAN model可以逐漸的生成類似數字的圖片原本一切順，但後來出現了generator 與 discriminator的loss為NAN的錯誤狀況導致訓練中斷 於網路搜尋稍微搜尋得到的原因是gradient 會有缺陷，或者是兩層的網路太淺，會有一些情形像是淺層學習太慢，深層太快或是深層太快，淺層動作太慢，文章還沒看完，明日要弄清楚原因">
+<meta property="og:updated_time" content="2017-08-16T01:19:37.525Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第九天170809">
-<meta name="twitter:description" content="今天成功儲存並使用前天訓練好的CNN 數字辨識模型訓練次數是20000次 前天辨識率非常低是因為訓練次數只有100次的緣故經過2萬次的訓練，幾乎可以辨識正確數字但太過奇怪的數字是會辨識錯誤的，例如4寫得太圓滑會看起來像9，這點與人一樣，會有辨識錯誤，故推測是合理的錯誤 下午正在了解gan，對抗生成式網路，簡單的說明原理大概是，首先有兩個神經網路，一個稱為generator，一個為discrimbe">
+<meta name="twitter:title" content="第十天170815">
+<meta name="twitter:description" content="今日試run了github上的MNIST GAN model可以逐漸的生成類似數字的圖片原本一切順，但後來出現了generator 與 discriminator的loss為NAN的錯誤狀況導致訓練中斷 於網路搜尋稍微搜尋得到的原因是gradient 會有缺陷，或者是兩層的網路太淺，會有一些情形像是淺層學習太慢，深層太快或是深層太快，淺層動作太慢，文章還沒看完，明日要弄清楚原因">
   
     <link rel="alternate" href="/atom.xml" title="Keep Curious" type="application/atom+xml">
   
@@ -67,9 +67,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-day9" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-day10" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/08/09/day9/" class="article-date">
+    <a href="/2017/08/09/day10/" class="article-date">
   <time datetime="2017-08-09T01:23:33.000Z" itemprop="datePublished">2017-08-09</time>
 </a>
     
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      第九天170809
+      第十天170815
     </h1>
   
 
@@ -89,17 +89,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天成功儲存並使用前天訓練好的CNN 數字辨識模型訓練次數是20000次</p>
-<p>前天辨識率非常低是因為訓練次數只有100次的緣故<br>經過2萬次的訓練，幾乎可以辨識正確數字<br>但太過奇怪的數字是會辨識錯誤的，例如4寫得太圓滑會看起來像9，<br>這點與人一樣，會有辨識錯誤，故推測是合理的錯誤</p>
-<p>下午正在了解gan，對抗生成式網路，簡單的說明原理大概是，<br>首先有兩個神經網路，一個稱為generator，一個為discrimber，分別是產生者與判定者</p>
-<p>產生者不斷的產生圖片，判定者不斷的判斷圖片是真實圖片還是產生者產生的圖片<br>在這麼做之前需要先訓練判定者，要藉由給判定者大量的真實圖片以熟悉真實圖片的特性<br>之後才可以由判定者判定產生者的產出圖片。</p>
-<p>想當然的，產生者一開始的圖片非常糟糕，如果是完全沒有訓練過的產生者，<br>甚至只會產生整張都是雜訊的圖片，但經過判定者不斷地判定對或錯，產生者逐漸地可以產生有畫面的圖片</p>
-<p>這就是對抗式的生成網路</p>
+        <p>今日試run了github上的MNIST GAN model<br>可以逐漸的生成類似數字的圖片<br>原本一切順，但後來出現了generator 與 discriminator的loss為NAN的錯誤狀況導致訓練中斷</p>
+<p>於網路搜尋稍微搜尋得到的原因是gradient 會有缺陷，或者是兩層的網路太淺，<br>會有一些情形像是淺層學習太慢，深層太快<br>或是深層太快，淺層動作太慢，文章還沒看完，<br>明日要弄清楚原因</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/09/day9/" data-id="cj6ebxxgc0007u4nbfj7pi4aq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/09/day10/" data-id="cj6ebxxfz0000u4nbvpoahnaw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -108,19 +104,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/08/09/day10/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          第十天170815
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/08/07/day8/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/08/09/day9/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">第八天170807</div>
+      <div class="article-nav-title">第九天170809</div>
     </a>
   
 </nav>
