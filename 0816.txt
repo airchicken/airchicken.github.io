@@ -1,0 +1,21 @@
+網路找資料的結果說NaN的問題應該是機器學習中常見的問題
+
+在使用梯度下降法的訓練過程中，由於淺層的網路學習速度很常發生低於深層網路的學習速度
+http://neuralnetworksanddeeplearning.com/chap5.html#other_obstacles_to_deep_learning
+
+在這個網址有很詳細但是不嚴謹的解釋，可是可以理解原因是怎麼發生的
+
+
+為了避免NaN的發生，收集到幾個做法
+1.降低learning rate 
+2.裁減gredient以控制在穩定的範圍 https://youtu.be/VuamhbEWEWA?t=16s
+3.利用W = tf.get_variable("W", shape=[784, 256],
+           initializer=tf.contrib.layers.xavier_initializer())給予適當的起始參數
+
+
+目前試過3沒有改善，1則是很穩定，但訓練尚未跑完不能確定結果如何
+2則是尚需要測試
+
+
+另外，在等待1的訓練過程中發現google在Udacity上有tensorflow的課程可以看，
+目前正在看RNN的相關影片。

@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>第十天170815 | Keep Curious</title>
+  <title>第十一天170816天170816 | Keep Curious</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今日試run了github上的MNIST GAN model可以逐漸的生成類似數字的圖片原本一切順，但後來出現了generator 與 discriminator的loss為NAN的錯誤狀況導致訓練中斷 於網路搜尋稍微搜尋得到的原因是gradient 會有缺陷，或者是兩層的網路太淺，會有一些情形像是淺層學習太慢，深層太快或是深層太快，淺層動作太慢，文章還沒看完，明日要弄清楚原因">
+  <meta name="description" content="網路找資料的結果說NaN的問題應該是機器學習中常見的問題 在使用梯度下降法的訓練過程中，由於淺層的網路學習速度很常發生低於深層網路的學習速度http://neuralnetworksanddeeplearning.com/chap5.html#other_obstacles_to_deep_learning 在這個網址有很詳細但是不嚴謹的解釋，可是可以理解原因是怎麼發生的 為了避免NaN的發生，收">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第十天170815">
-<meta property="og:url" content="http://yoursite.com/2017/08/09/day10/index.html">
+<meta property="og:title" content="第十一天170816天170816">
+<meta property="og:url" content="http://yoursite.com/2017/08/16/day11/index.html">
 <meta property="og:site_name" content="Keep Curious">
-<meta property="og:description" content="今日試run了github上的MNIST GAN model可以逐漸的生成類似數字的圖片原本一切順，但後來出現了generator 與 discriminator的loss為NAN的錯誤狀況導致訓練中斷 於網路搜尋稍微搜尋得到的原因是gradient 會有缺陷，或者是兩層的網路太淺，會有一些情形像是淺層學習太慢，深層太快或是深層太快，淺層動作太慢，文章還沒看完，明日要弄清楚原因">
-<meta property="og:updated_time" content="2017-08-16T01:19:37.525Z">
+<meta property="og:description" content="網路找資料的結果說NaN的問題應該是機器學習中常見的問題 在使用梯度下降法的訓練過程中，由於淺層的網路學習速度很常發生低於深層網路的學習速度http://neuralnetworksanddeeplearning.com/chap5.html#other_obstacles_to_deep_learning 在這個網址有很詳細但是不嚴謹的解釋，可是可以理解原因是怎麼發生的 為了避免NaN的發生，收">
+<meta property="og:updated_time" content="2017-08-16T09:56:34.467Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第十天170815">
-<meta name="twitter:description" content="今日試run了github上的MNIST GAN model可以逐漸的生成類似數字的圖片原本一切順，但後來出現了generator 與 discriminator的loss為NAN的錯誤狀況導致訓練中斷 於網路搜尋稍微搜尋得到的原因是gradient 會有缺陷，或者是兩層的網路太淺，會有一些情形像是淺層學習太慢，深層太快或是深層太快，淺層動作太慢，文章還沒看完，明日要弄清楚原因">
+<meta name="twitter:title" content="第十一天170816天170816">
+<meta name="twitter:description" content="網路找資料的結果說NaN的問題應該是機器學習中常見的問題 在使用梯度下降法的訓練過程中，由於淺層的網路學習速度很常發生低於深層網路的學習速度http://neuralnetworksanddeeplearning.com/chap5.html#other_obstacles_to_deep_learning 在這個網址有很詳細但是不嚴謹的解釋，可是可以理解原因是怎麼發生的 為了避免NaN的發生，收">
   
     <link rel="alternate" href="/atom.xml" title="Keep Curious" type="application/atom+xml">
   
@@ -67,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-day10" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-day11" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/08/09/day10/" class="article-date">
-  <time datetime="2017-08-09T01:23:33.000Z" itemprop="datePublished">2017-08-09</time>
+    <a href="/2017/08/16/day11/" class="article-date">
+  <time datetime="2017-08-16T01:23:33.000Z" itemprop="datePublished">2017-08-16</time>
 </a>
     
   </div>
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      第十天170815
+      第十一天170816天170816
     </h1>
   
 
@@ -89,13 +89,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今日試run了github上的MNIST GAN model<br>可以逐漸的生成類似數字的圖片<br>原本一切順，但後來出現了generator 與 discriminator的loss為NAN的錯誤狀況導致訓練中斷</p>
-<p>於網路搜尋稍微搜尋得到的原因是gradient 會有缺陷，或者是兩層的網路太淺，<br>會有一些情形像是淺層學習太慢，深層太快<br>或是深層太快，淺層動作太慢，文章還沒看完，<br>明日要弄清楚原因</p>
+        <p>網路找資料的結果說NaN的問題應該是機器學習中常見的問題</p>
+<p>在使用梯度下降法的訓練過程中，由於淺層的網路學習速度很常發生低於深層網路的學習速度<br><a href="http://neuralnetworksanddeeplearning.com/chap5.html#other_obstacles_to_deep_learning" target="_blank" rel="external">http://neuralnetworksanddeeplearning.com/chap5.html#other_obstacles_to_deep_learning</a></p>
+<p>在這個網址有很詳細但是不嚴謹的解釋，可是可以理解原因是怎麼發生的</p>
+<p>為了避免NaN的發生，收集到幾個做法<br>1.降低learning rate<br>2.裁減gredient以控制在穩定的範圍 <a href="https://youtu.be/VuamhbEWEWA?t=16s" target="_blank" rel="external">https://youtu.be/VuamhbEWEWA?t=16s</a><br>3.利用W = tf.get_variable(“W”, shape=[784, 256],<br>           initializer=tf.contrib.layers.xavier_initializer())給予適當的起始參數</p>
+<p>目前試過3沒有改善，1則是很穩定，但訓練尚未跑完不能確定結果如何<br>2則是尚需要測試</p>
+<p>另外，在等待1的訓練過程中發現google在Udacity上有tensorflow的課程可以看，<br>目前正在看RNN的相關影片。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/09/day10/" data-id="cj6ebxxfz0000u4nbvpoahnaw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/16/day11/" data-id="cj6eufak40001jknbx473pupg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -105,9 +109,9 @@
 <nav id="article-nav">
   
   
-    <a href="/2017/08/09/day9/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/08/15/day10/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">第九天170809</div>
+      <div class="article-nav-title">第十天170815</div>
     </a>
   
 </nav>
@@ -144,7 +148,11 @@
       <ul>
         
           <li>
-            <a href="/2017/08/09/day10/">第十天170815</a>
+            <a href="/2017/08/16/day11/">第十一天170816天170816</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/15/day10/">第十天170815</a>
           </li>
         
           <li>
@@ -157,10 +165,6 @@
         
           <li>
             <a href="/2017/08/04/day7/">第七天170804</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/03/day6/">第六天170803</a>
           </li>
         
       </ul>
