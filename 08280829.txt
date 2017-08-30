@@ -1,0 +1,42 @@
+8/28
+上週遇到訓練到一定程度時出現NaN的問題
+經過網路查詢至少看到3位答覆可能是vanish grdient problem
+根據文章內容提到，梯度消失的問題是由神經網路學習速度相差甚大造成
+
+
+嘗試使用GAN首先看了一次李宏毅老師的影片
+老師提到原版的GAN很多人試過很難訓練
+
+不好拿捏discriminator的程度與generator的程度
+後來於去年6月有人首度提出WGAN，可以改善這個狀況
+他的做法是把f-divergence拿掉，換成earth move distance，這同時也是W字面的意思
+
+用這個distance可以在generator與discriminator的生成分布沒有交集時仍有作用
+因為它可以清楚地描述兩個分布的距離，以幫助generator往正確的方向學習
+
+不然的話discriminator太厲害會造成gradient在generator的分布附近非常平緩還有real data處也是
+
+
+另外Wgan還有一個突破是discriminator判斷線段會逐漸往垂直的方向變化
+所以WGAN還加上了lipzicth的限制使得坡度不會過陡，有效的解決了這個問題
+
+
+
+8/29
+為了使用WGAN，看到paper提到為了做個訓練花了18個小時
+
+所以今天嘗試GPU運算的tensorflow，花了不少時間研究移除與重新安裝
+安裝GPU版本的tensorflow需要先安裝CUDA與cuDNN等工具，
+還有要事先確認GPU的型號與電腦的作業系統才可以選擇正確的工具安裝
+以上的步驟在tensorflow的官方文件中也有記載
+
+安裝成功後嘗試使用的cpu:0  與 gpu:0運作MNIST的regression訓練
+cpu只需要11秒，GPU卻需要19秒，不知道問題出在哪裏。
+後來嘗試了CNN的MNIST辨識模型，CPU可以運作，兩周前最後的運算時間是30分鐘左右
+但是設定為GPU運算時就出現錯誤了，原因一樣不知道，有待確認。
+
+另外為了更加了解整個tensorflow的使用，上午花了時間在tensorboard的使用，
+已經可以依照自己的架構匯出網路圖，但點開每個區塊出現的細項還需要再了解。
+
+
+中間有嘗試在Docker或是anaconda安裝tensorflow，卻出現錯誤訊息所以暫且擱置一旁。

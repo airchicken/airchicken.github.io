@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>第五天170725 | Keep Curious</title>
+  <title>第十二天170828天 | Keep Curious</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Convolutional Neural Network 濃縮圖片資訊，增加效率，可以解讀為降低畫素仍不過度影響辨認準確度的手法 有valid  padding 與 same adding 之差別 Pooling篩選資訊，同樣是降低畫素的作法，但是較可能影響辨識能力 可多層，不能無上限">
+  <meta name="description" content="上週遇到訓練到一定程度時出現NaN的問題經過網路查詢至少看到3位答覆可能是vanish grdient problem根據文章內容提到，梯度消失的問題是由神經網路學習速度相差甚大造成 嘗試使用GAN首先看了一次李宏毅老師的影片老師提到原版的GAN很多人試過很難訓練 不好拿捏discriminator的程度與generator的程度後來於去年6月有人首度提出WGAN，可以改善這個狀況他的做法是把f-">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第五天170725">
-<meta property="og:url" content="http://yoursite.com/2017/07/25/day5/index.html">
+<meta property="og:title" content="第十二天170828天">
+<meta property="og:url" content="http://yoursite.com/2017/08/28/day12/index.html">
 <meta property="og:site_name" content="Keep Curious">
-<meta property="og:description" content="Convolutional Neural Network 濃縮圖片資訊，增加效率，可以解讀為降低畫素仍不過度影響辨認準確度的手法 有valid  padding 與 same adding 之差別 Pooling篩選資訊，同樣是降低畫素的作法，但是較可能影響辨識能力 可多層，不能無上限">
-<meta property="og:updated_time" content="2017-08-09T01:44:40.497Z">
+<meta property="og:description" content="上週遇到訓練到一定程度時出現NaN的問題經過網路查詢至少看到3位答覆可能是vanish grdient problem根據文章內容提到，梯度消失的問題是由神經網路學習速度相差甚大造成 嘗試使用GAN首先看了一次李宏毅老師的影片老師提到原版的GAN很多人試過很難訓練 不好拿捏discriminator的程度與generator的程度後來於去年6月有人首度提出WGAN，可以改善這個狀況他的做法是把f-">
+<meta property="og:updated_time" content="2017-08-30T01:07:04.385Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第五天170725">
-<meta name="twitter:description" content="Convolutional Neural Network 濃縮圖片資訊，增加效率，可以解讀為降低畫素仍不過度影響辨認準確度的手法 有valid  padding 與 same adding 之差別 Pooling篩選資訊，同樣是降低畫素的作法，但是較可能影響辨識能力 可多層，不能無上限">
+<meta name="twitter:title" content="第十二天170828天">
+<meta name="twitter:description" content="上週遇到訓練到一定程度時出現NaN的問題經過網路查詢至少看到3位答覆可能是vanish grdient problem根據文章內容提到，梯度消失的問題是由神經網路學習速度相差甚大造成 嘗試使用GAN首先看了一次李宏毅老師的影片老師提到原版的GAN很多人試過很難訓練 不好拿捏discriminator的程度與generator的程度後來於去年6月有人首度提出WGAN，可以改善這個狀況他的做法是把f-">
   
     <link rel="alternate" href="/atom.xml" title="Keep Curious" type="application/atom+xml">
   
@@ -67,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-day5" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-day12" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/07/25/day5/" class="article-date">
-  <time datetime="2017-07-25T01:23:33.000Z" itemprop="datePublished">2017-07-25</time>
+    <a href="/2017/08/28/day12/" class="article-date">
+  <time datetime="2017-08-28T01:23:33.000Z" itemprop="datePublished">2017-08-28</time>
 </a>
     
   </div>
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      第五天170725
+      第十二天170828天
     </h1>
   
 
@@ -89,16 +89,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Convolutional Neural Network</p>
-<p>濃縮圖片資訊，增加效率，可以解讀為降低畫素仍不過度影響辨認準確度的手法</p>
-<p>有valid  padding 與 same adding 之差別</p>
-<p>Pooling<br>篩選資訊，同樣是降低畫素的作法，但是較可能影響辨識能力</p>
-<p>可多層，不能無上限</p>
+        <p>上週遇到訓練到一定程度時出現NaN的問題<br>經過網路查詢至少看到3位答覆可能是vanish grdient problem<br>根據文章內容提到，梯度消失的問題是由神經網路學習速度相差甚大造成</p>
+<p>嘗試使用GAN首先看了一次李宏毅老師的影片<br>老師提到原版的GAN很多人試過很難訓練</p>
+<p>不好拿捏discriminator的程度與generator的程度<br>後來於去年6月有人首度提出WGAN，可以改善這個狀況<br>他的做法是把f-divergence拿掉，換成earth move distance，這同時也是W字面的意思</p>
+<p>用這個distance可以在generator與discriminator的生成分布沒有交集時仍有作用<br>因為它可以清楚地描述兩個分布的距離，以幫助generator往正確的方向學習</p>
+<p>不然的話discriminator太厲害會造成gradient在generator的分布附近非常平緩還有real data處也是</p>
+<p>另外Wgan還有一個突破是discriminator判斷線段會逐漸往垂直的方向變化<br>所以WGAN還加上了lipzicth的限制使得坡度不會過陡，有效的解決了這個問題</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/25/day5/" data-id="cj6ybouv80007ugnb2d1wmvc5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/28/day12/" data-id="cj6ybouv10002ugnb5iwkhdr1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -107,19 +108,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/08/03/day6/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/08/29/day13/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          第六天170803
+          第十三天170829
         
       </div>
     </a>
   
   
-    <a href="/2017/07/24/day4/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/08/16/day11/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">第四天170724</div>
+      <div class="article-nav-title">第十一天170816天</div>
     </a>
   
 </nav>
